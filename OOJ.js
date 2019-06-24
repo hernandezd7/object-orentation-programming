@@ -6,49 +6,49 @@ function display (content){
 
 // create a function that takes a name or string as a parameter
 // and returns "hi my name is " parameter given 
-// function name (name ){
-//     return "Hi ,my name is "+ name +".";
-// }
+ function name (name ){
+ return "Hi ,my name is "+ name +".";
+ }
 
 
 
 // // create 3 function that describe the powers of a ninja  you would like create
 
-// function sharinga(ability){
-// return "using "+ ability + ".";
-// }
-// function katon(style){
-//     return "katon"+ style + "Jutsu"
-// }
-// function melee(move){
-//     return "using my "+move +"to attack in close combat .";
+function sharinga(ability){
+return "using "+ ability + ".";
+}
+function katon(style){
+    return "katon"+ style + "Jutsu"
+}
+function melee(move){
+    return "using my "+move +"to attack in close combat .";
  
-// }
-// // display(name("itachi"));
-// // display (melee("punch"));
-// // display(katon("fire "));
-// // display(sharigan("mangeko"));
+}
+// display(name("itachi"));
+// display (melee("punch"));
+// display(katon("fire "));
+// display(sharigan("mangeko"));
 
 
-// // object orientation programing
-// // -incapsulation
+// object orientation programing
+// -incapsulation
 
-// // OOP incapstation : grouping all behaviors inside an Object 
-// const ninja = {
-//    name(name){
-//         return "Hi ,my name is "+ name +".";
-//     },
+// OOP incapstation : grouping all behaviors inside an Object 
+const ninja = {
+   name(name){
+         return "Hi ,my name is "+ name +".";
+     },
     
-//  sharinga(ability){
-//     return "using "+ ability + ".";
-//     },
-//      katon(style){
-//         return "katon"+ style + "Jutsu"
-//     },
-//  melee(move){
-//         return "using my "+move +"to attack in close combat .";
-
-
+  sharinga(ability){
+     return "using "+ ability + ".";
+     },
+      katon(style){
+         return "katon"+ style + "Jutsu"
+     },
+  melee(move){
+       return "using my "+move +"to attack in close combat .";
+  }
+}
 
 
 
@@ -76,13 +76,23 @@ return "HI, my name is"+ this.nameinsideNInjaGod + "."};
     melee(){
     return "using my"+ this.move + "to attack from close counter ."}
 }
-
-let itachi = new NinjaGod ("itachi","magenko", "Fire","upside down knife throw");
-
-
-display(itachi)
-display(itachi)
-display(itachi)
-display(itachi)
+ let sasuke = new NinjaGod ("itachi","magenko", "Fire","upside down knife throw");
 
 
+// display(itachi)
+// display(itachi)
+// display(itachi)
+// display(itachi)
+
+// OOP Polymorphism : us super 
+class UchihaGod extends NinjaGod {
+    constructor(name, ability,style,move) {
+        super (name,ability,style,move)
+        this.village = "Hidden Leaf";
+    }
+     combo(){
+         return "Activate : " + super.sharinga() + "combo with" + super.melee ()
+     }
+}
+
+let itachi = new UchihaGod ("itachi","magenko", "Fire","upside down knife throw");
