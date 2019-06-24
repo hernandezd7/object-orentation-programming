@@ -79,10 +79,9 @@ return "HI, my name is"+ this.nameinsideNInjaGod + "."};
  let sasuke = new NinjaGod ("itachi","magenko", "Fire","upside down knife throw");
 
 
-// display(itachi)
-// display(itachi)
-// display(itachi)
-// display(itachi)
+// display(itachi.name());
+// display(itachi.combo());
+// display(itachi.village);
 
 // OOP Polymorphism : us super 
 class UchihaGod extends NinjaGod {
@@ -95,4 +94,8 @@ class UchihaGod extends NinjaGod {
      }
 }
 
-let itachi = new UchihaGod ("itachi","magenko", "Fire","upside down knife throw");
+let itachi = new UchihaGod ("itachi","magenko", "Fire","upside d    own knife throw");
+
+display(itachi.name());
+display(itachi.combo());
+display(itachi.village);
